@@ -12,6 +12,7 @@ public class ApiTest {
     @Test
     public void test_CacheService() throws Exception {
 
+        //这是个动态生成的代理对象，没有代码上的具体实现？
         CacheService proxy_EGM = JDKProxy.getProxy(CacheServiceImpl.class, new EGMCacheAdapter());
         proxy_EGM.set("user_name_01", "小傅哥");
         String val01 = proxy_EGM.get("user_name_01");
